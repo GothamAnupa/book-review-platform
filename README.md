@@ -37,3 +37,36 @@ This platform allows users to:
 ## Project Structure
 
 book-review-platform/ ├── client/ # React Frontend │ ├── public/ │ └── src/ │ ├── assets/ # Images, logos, etc. │ ├── components/ # Reusable components (e.g., BookCard, Navbar) │ ├── pages/ # Route pages (Home, BookDetail, Profile) │ ├── context/ # React Context (or Redux store) │ ├── api/ # Axios calls to backend │ ├── App.js │ └── index.js ├── server/ # Node.js + Express Backend │ ├── config/ # DB connection setup │ ├── controllers/ # Route handlers (books, users, reviews) │ ├── models/ # Mongoose models / Sequelize models │ ├── routes/ # API route definitions │ ├── middlewares/ # Error handling, auth, etc. │ ├── validators/ # Joi / express-validator input validation │ ├── app.js # Express app entry │ └── server.js # Server start + DB connect ├── .env ├── README.md ├── package.json └── package-lock.json
+
+Features
+Home Page: Featured books and general browsing.
+Book Listing: Search and filter functionality to explore books.
+Book Details Page: View book details, ratings, and reviews.
+Review Submission: Submit new reviews and ratings for books.
+User Profile: View and update your profile information.
+Admin Functionality: Admins can add new books.
+API Endpoints
+
+Books
+GET /api/books: Get a list of all books.
+GET /api/books/:id: Get details of a specific book.
+POST /api/books: Add a new book (Admin only).
+
+Reviews
+GET /api/reviews: Get all reviews for a book.
+POST /api/reviews: Submit a new review.
+
+Users
+GET /api/users/:id: Get a user's profile.
+PUT /api/users/:id: Update a user's profile.
+
+How to Contribute
+Fork the repository.
+Create a new branch (git checkout -b feature-name).
+Make your changes and commit them (git commit -am 'Add new feature').
+Push to your fork (git push origin feature-name).
+Open a pull request to the main repository.
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
